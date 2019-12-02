@@ -1,0 +1,29 @@
+<html>
+<head>
+    <title>All Tasks</title>
+</head>
+<body>
+    <h2>Tasks</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Contacts</th>
+        </tr>
+
+        {{#tasks}}
+        <tr>
+            <td>{{id}}</td>
+            <td><a href="/task/{{id}}">{{name}}</a></td>
+            <td>{{description}}</td>
+            <td>{{date}}</td>
+            <td>{{time}}</td>
+            <td>{{contacts}}</td>
+        </tr>
+        {{/tasks}}
+    </table>
+</body>
+</html>

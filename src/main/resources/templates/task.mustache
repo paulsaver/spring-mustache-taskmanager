@@ -1,0 +1,43 @@
+<html>
+<head>
+    <title>View Task</title>
+</head>
+<body>
+    <h2>View Task</h2>
+    <a href="/">Back to Task List</a>
+    {{#task}}
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>:</td>
+                <td>{{id}}</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>:</td>
+                <td>{{name}}</td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td>:</td>
+                <td>{{description}}</td>
+            </tr>
+            <tr>
+                <td>Date</td>
+                <td>:</td>
+                <td>{{date}}</td>
+            </tr>
+            <tr>
+                <td>Time</td>
+                <td>:</td>
+                <td>{{time}}</td>
+            </tr>
+            <tr>
+                <td>Contacts</td>
+                <td>:</td>
+                <td>{{contacts}}</td>
+            </tr>
+        </table>
+    {{/task}}
+</body>
+</html>
