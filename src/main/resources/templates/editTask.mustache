@@ -1,0 +1,47 @@
+<html>
+<head>
+    <title>Edit Task</title>
+</head>
+<body>
+<h2>Edit Task</h2>
+<a href="/">Back to Task List</a>
+<form action="{{#add}}/task/add{{/add}}{{^add}}/task/{{user.id}}/edit{{/add}}" name="task" method="POST">
+    <table>
+        {{#task.id}}
+        <tr>
+            <td>ID</td>
+            <td>:</td>
+            <td>{{task.id}}</td>
+        </tr>
+        {{/task.id}}
+        <tr>
+            <td>Name</td>
+            <td>:</td>
+            <td><input type="text" name="name" value="{{#task.name}}{{task.name}}{{/task.name}}"/></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td>:</td>
+            <td><input type="text" name="description" value="{{#task.description}}{{task.description}}{{/task.description}}"/></td>
+        </tr>
+        <tr>
+            <td>Date</td>
+            <td>:</td>
+            <td><input type="date" name="date" value="{{#task.date}}{{task.date}}{{/task.date}}"></td>
+        </tr>
+        <tr>
+            <td>Time</td>
+            <td>:</td>
+            <td><input type="time" name="time" value="{{#task.time}}{{task.time}}{{/task.time}}"></td>
+        </tr>
+        <tr>
+            <td>Contacts</td>
+            <td>:</td>
+            <td><input type="text" name="contacts" value="{{#task.contacts}}{{task.contacts}}{{/task.contacts}}"/></td>
+        </tr>
+    </table>
+    <input type="submit" value="{{#add}}Create{{/add}}{{^add}}Update{{/add}}" />
+</form>
+
+</body>
+</html>

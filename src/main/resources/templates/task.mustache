@@ -39,5 +39,16 @@
             </tr>
         </table>
     {{/task}}
+    {{#allowDelete}}
+        <form action="/task/{{task.id}}/delete" method="POST">
+            Delete this task? <input type="submit" value="Yes" />
+        </form>
+    {{/allowDelete}}
+    {{^allowDelete}}
+        <div>
+            <a href="/task/{{task.id}}/edit">Edit</a> |
+            <a href="/task/{{task.id}}/delete">Delete</a>
+        </div>
+    {{/allowDelete}}
 </body>
 </html>
