@@ -55,4 +55,17 @@ public class TaskController {
         Task newTask = taskService.saveTask(task);
         return "redirect:/task/" + newTask.getId();
     }
+
+    @GetMapping("/task/{id}/edit")
+    public String showEditTask(@PathVariable Long id, Model model){
+        model.addAttribute("task", taskService.getTaskById(id));
+        model.addAttribute("add", false);
+        return "editTask";
+    }
+
+    @PostMapping("/task/{id}/edit")
+    public String editTask(Model model, @ModelAttribute("task") Task task) {
+        Task editedTask = taskService.saveTask(task);
+        return "redirect:/task/" + editedTask.getId();
+    }
 }

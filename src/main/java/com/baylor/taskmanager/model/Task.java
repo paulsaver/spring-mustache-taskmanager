@@ -3,6 +3,7 @@ package com.baylor.taskmanager.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -22,7 +23,11 @@ public class Task {
     private Long id;
     private String name;
     private String description;
+
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private LocalDate date;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.TIME)
     private LocalTime time;
     private String contacts;
 
