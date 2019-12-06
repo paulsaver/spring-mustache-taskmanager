@@ -17,12 +17,12 @@
         <tr>
             <td>Name</td>
             <td>:</td>
-            <td><input type="text" name="name" value="{{#task.name}}{{task.name}}{{/task.name}}"/></td>
+            <td><input required type="text" name="name" value="{{#task.name}}{{task.name}}{{/task.name}}"/></td>
         </tr>
         <tr>
             <td>Description</td>
             <td>:</td>
-            <td><input type="text" name="description" value="{{#task.description}}{{task.description}}{{/task.description}}"/></td>
+            <td><input required type="text" name="description" value="{{#task.description}}{{task.description}}{{/task.description}}"/></td>
         </tr>
         <tr>
             <td>Date</td>
@@ -37,7 +37,7 @@
         <tr>
             <td>Contacts</td>
             <td>:</td>
-            <td><input type="text" name="contacts" value="{{#task.contacts}}{{task.contacts}}{{/task.contacts}}"/></td>
+            <td><input required type="text" name="contacts" value="{{#task.contacts}}{{task.contacts}}{{/task.contacts}}"/></td>
         </tr>
     </table>
     <input type="submit" value="{{#add}}Create{{/add}}{{^add}}Update{{/add}}" />
